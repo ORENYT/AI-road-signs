@@ -34,6 +34,7 @@ def generate_images(data: dict, multiply: int = 2, show: bool = False) -> tuple:
     if show:
         delete_previous_image_output()
         save_dir = os.path.curdir
+        save_dir = os.path.join(save_dir, "model")
         save_dir = os.path.join(save_dir, "reworked_images")
         for i, generated_image in enumerate(data_x):
             img = Image.fromarray(generated_image)
